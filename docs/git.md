@@ -17,14 +17,13 @@ git init
 If you don't want a group locally: `bundle config set --local without 'production'`
 Edit Gemfile and then run `bundle install`
 
-### Template first push to GH:
+### Template first push to GH
 
 ```bash
-git remote add origin https://github.com/<name>/hello_app.git
+git remote add origin https://github.com/<name>/<appName>.git
 git branch -M main
 git push -u origin main
 ```
-
 
 ## General
 
@@ -52,7 +51,15 @@ Switch branch (care to commit first if possible): `git switch <branch>`
 
 Merge branch: First switch to branch you want to commit into `git switch <branchMergeInto>` then `git merge <branchMergeFrom>`
 
-Delete branch: `git branch -d <branch>` (-D will delete even if changes aren't merged)
+Delete branch (optionally common after merging a branch): `git branch -d <branch>` (-D will delete even if changes aren't merged. Like mistakes on new branches)
+
+### For illustration only; don't do this unless you mess up a branch
+git switch -c topic-branch
+<really mess up the branch>
+git add -A
+git commit -am "Make major mistake"
+git switch main
+git branch -D topic-branch
 
 ## Sub path setup
 
