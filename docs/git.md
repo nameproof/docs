@@ -54,8 +54,9 @@ Merge branch: First switch to branch you want to commit into `git switch <branch
 Delete branch (optionally common after merging a branch): `git branch -d <branch>` (-D will delete even if changes aren't merged. Like mistakes on new branches)
 
 ### For illustration only; don't do this unless you mess up a branch
-git switch -c topic-branch--
-<really mess up the branch>--
+
+git switch -c topic-branch\-\-
+<really mess up the branch>\-\-
 git add -A  
 git commit -am "Make major mistake"  
 git switch main  
@@ -76,7 +77,7 @@ end
 
 ## Secrets
 
-- Option 2: Read secrets via a command--
-RAILS_MASTER_KEY=$(cat config/master.key)--
+- Option 2: Read secrets via a command\-\-
+RAILS_MASTER_KEY=$(cat config/master.key)\-\-
 KAMAL_REGISTRY_PASSWORD=$(bin/rails runner "puts Rails.application.credentials.docker.registry_password")  
 `bin/rails credentials:edit`
