@@ -56,7 +56,7 @@ Delete branch (optionally common after merging a branch): `git branch -d <branch
 ### For illustration only; don't do this unless you mess up a branch
 
 git switch -c topic-branch<br>
-<really mess up the branch><br>
+\<really mess up the branch\><br>
 git add -A  
 git commit -am "Make major mistake"  
 git switch main  
