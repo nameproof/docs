@@ -11,7 +11,7 @@ Close this tab: `ctrl shift w`
 
 Goto split: `ctrl alt arrow`<br>
 New split down: `ctrl shift e`<br>
-New split right: `ctrl shift o`<br
+New split right: `ctrl shift o`<br>
 Close split: `ctrl d` (only works with nothing written)<br>
 Toggle split zoom: `ctrl shift enter`
 
