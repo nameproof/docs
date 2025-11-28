@@ -55,16 +55,16 @@ Delete branch (optionally common after merging a branch): `git branch -d <branch
 
 ### For illustration only; don't do this unless you mess up a branch
 
-git switch -c topic-branch<br>
-\<really mess up the branch\><br>
-git add -A  
-git commit -am "Make major mistake"  
-git switch main  
-git branch -D topic-branch
+`git switch -c topic-branch`<br>
+*really mess up the branch*<br>
+`git add -A``  
+`git commit -am` *Make major mistake*  
+`git switch main`  
+`git branch -D topic-branch`
 
-## Sub path setup
+## Kamal deploy Sub path setup
 
-Use the deploy template.
+Use the deploy.yml template.<br>
 In routes.rb, add the scope:
 
 ```ruby
@@ -75,9 +75,30 @@ Rails.application.routes.draw do
 end
 ```
 
+In (or preffered environment) config/environments/production.rb
+
+```ruby
+Rails.application.configure do
+  # Settings specified here will take precedence over those in config/application.rb.
+
+  # Enable Puma to serve static assets directly (required without nginx/reverse proxy for assets)
+  config.public_file_server.enabled = true
+
+  # Rewrite subpath asset requests to root-relative for static serving
+  # (e.g., /sample_app/assets/tailwind-*.css -> /assets/tailwind-*.css internally)
+  if relative_url_root = ENV['RAILS_RELATIVE_URL_ROOT'].presence
+    config.middleware.insert_before 0, Rack::Rewrite do
+      rewrite %r{#{Regexp.escape(relative_url_root)}(/assets/.*)}, '/$1'
+    end
+  end
+
+  # ... rest of config ...
+end
+```
+
 ## Secrets
 
-- Option 2: Read secrets via a command<br>
+Option 2: Read secrets via a command<br>
 RAILS_MASTER_KEY=$(cat config/master.key)<br>
-KAMAL_REGISTRY_PASSWORD=$(bin/rails runner "puts Rails.application.credentials.docker.registry_password")  
+KAMAL_REGISTRY_PASSWORD=$(bin/rails runner "puts Rails.application.credentials.docker.registry_password")<br>
 `bin/rails credentials:edit`
