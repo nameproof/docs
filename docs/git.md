@@ -57,9 +57,10 @@ Delete branch (optionally common after merging a branch): `git branch -d <branch
 
 `git switch -c topic-branch`<br>
 *really mess up the branch*<br>
-`git add -A``  
-`git commit -am` *Make major mistake*  
-`git switch main`  
+`git add -A`<br>
+`git commit -am`<br>
+*Make major mistake*<br>
+`git switch main`<br>
 `git branch -D topic-branch`
 
 ## Kamal deploy Sub path setup
@@ -74,6 +75,9 @@ Rails.application.routes.draw do
   end
 end
 ```
+
+Install rewrite gem:<br>
+`gem "rack-rewrite", "~> 1.1"`
 
 In (or preffered environment) config/environments/production.rb
 
@@ -98,7 +102,10 @@ end
 
 ## Secrets
 
-Option 2: Read secrets via a command<br>
-RAILS_MASTER_KEY=$(cat config/master.key)<br>
-KAMAL_REGISTRY_PASSWORD=$(bin/rails runner "puts Rails.application.credentials.docker.registry_password")<br>
-`bin/rails credentials:edit`
+Option 2: Read secrets via a command
+
+```yml
+RAILS_MASTER_KEY=$(cat config/master.key)
+KAMAL_REGISTRY_PASSWORD=$(bin/rails runner "puts Rails.application.credentials.docker.registry_password")
+bin/rails credentials:edit
+```
