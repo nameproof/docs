@@ -20,6 +20,8 @@ Edit Gemfile and then run `bundle install`
 ### Template first push to GH
 
 ```bash
+git add -A
+git commit -m "init"
 git remote add origin https://github.com/<name>/<appName>.git
 git branch -M main
 git push -u origin main
