@@ -27,6 +27,10 @@ git branch -M main
 git push -u origin main
 ```
 
+## Tailwind css
+
+[https://tailwindcss.com/docs/installation/framework-guides/ruby-on-rails](https://tailwindcss.com/docs/installation/framework-guides/ruby-on-rails)
+
 ## General
 
 Add project files to repo staging area, becoming pending changes: `git add -A`
