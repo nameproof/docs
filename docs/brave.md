@@ -1,4 +1,4 @@
-# Brave Keyboard Shortcuts
+# Brave Shortcuts
 
 ## Tab Management
 
@@ -33,7 +33,7 @@
 | Toggle Bookmarks Bar        | `Ctrl + Shift + B`        |
 | Open Bookmarks Manager      | `Ctrl + Shift + O`        |
 
-## Other Essential Shortcuts
+## Other
 
 | Action                      | Shortcut                  |
 |-----------------------------|---------------------------|
@@ -47,7 +47,7 @@
 | Developer Tools             | `F12` |
 | Print                       | `Ctrl + P`                |
 
-## Customization (Recommended)
+## Customization
 
 **Settings → System → Shortcuts**  
 Change any conflicting shortcut to something free
