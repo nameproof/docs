@@ -1,3 +1,7 @@
+---
+icon: simple/git
+---
+
 # Git
 
 ## Config

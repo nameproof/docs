@@ -1,4 +1,8 @@
-# Brave Shortcuts
+---
+icon: simple/brave
+---
+
+# Brave
 
 ## Tab Management
 

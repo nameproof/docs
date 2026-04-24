@@ -1,4 +1,8 @@
-# LazyVim cheat sheet
+---
+icon: simple/lazyvim
+---
+
+# LazyVim
 
 <https://lazyvim-ambitious-devs.phillips.codes/course/chapter-1/>
 <!-- markdownlint-disable MD033 -->

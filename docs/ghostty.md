@@ -1,4 +1,8 @@
 <!-- markdownlint-disable MD033 -->
+---
+icon: simple/ghostty
+---
+
 # Ghostty
 
 ## Tabs
