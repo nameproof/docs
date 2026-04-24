@@ -1,7 +1,7 @@
-<!-- markdownlint-disable MD033 -->
 ---
 icon: simple/ghostty
 ---
+<!-- markdownlint-disable MD033 -->
 
 # Ghostty
 
