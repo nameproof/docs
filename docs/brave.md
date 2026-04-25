@@ -28,6 +28,7 @@ icon: simple/brave
 | Hard refresh (ignore cache) | `Ctrl + Shift + R`        |
 | Focus address bar           | `F6` |
 | Search from anywhere        | `Ctrl + K`                |
+| Scroll down/up page         | `Space/Shift + Space`   |
 
 ## Bookmarks
 
